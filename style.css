@@ -218,7 +218,7 @@ h3 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: #0a1810 url('public/images/Scotts-head2.jpg') center/cover no-repeat;
+  background: #0a1810 url('public/images/Scotts-head2_upscayl_3x_high-fidelity-4x.png') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -425,7 +425,7 @@ h3 {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 70%;
   display: block;
 }
 
