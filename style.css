@@ -343,6 +343,18 @@ h3 {
   line-height: 1.5;
 }
 
+/* numbered variant used in updated HTML */
+.value-num {
+  color: var(--amber);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  padding-top: 3px;
+  width: 20px;
+  opacity: 0.8;
+}
+
 .value-item strong {
   display: block;
   font-family: var(--font-heading);
@@ -490,29 +502,6 @@ h3 {
   transform: translateY(-4px);
 }
 
-.program-card--featured {
-  background: var(--green-deep);
-  color: var(--white);
-  border-color: transparent;
-}
-
-.program-card--featured h3,
-.program-card--featured > p {
-  color: rgba(255,255,255,0.9);
-}
-
-.program-card--featured h3 {
-  color: var(--white);
-}
-
-.program-card--featured .program-sponsor strong {
-  color: var(--amber-light);
-}
-
-.program-card--featured .program-sponsor span {
-  color: rgba(255,255,255,0.5);
-}
-
 .program-icon {
   font-size: 2rem;
   margin-bottom: 16px;
@@ -542,11 +531,6 @@ h3 {
   position: relative;
 }
 
-.program-card--featured .program-details li {
-  color: rgba(255,255,255,0.7);
-  border-bottom-color: rgba(255,255,255,0.08);
-}
-
 .program-details li::before {
   content: '—';
   position: absolute;
@@ -558,10 +542,6 @@ h3 {
 .program-sponsor {
   padding-top: 20px;
   border-top: 1px solid rgba(0,0,0,0.07);
-}
-
-.program-card--featured .program-sponsor {
-  border-top-color: rgba(255,255,255,0.1);
 }
 
 .program-sponsor strong {
@@ -576,6 +556,38 @@ h3 {
 .program-sponsor span {
   font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+/* Featured card overrides — must come AFTER generic card rules */
+.program-card--featured {
+  background: var(--green-deep);
+  color: var(--white);
+  border-color: transparent;
+}
+
+.program-card--featured h3 {
+  color: var(--white);
+}
+
+.program-card--featured > p {
+  color: rgba(255,255,255,0.85);
+}
+
+.program-card--featured .program-details li {
+  color: rgba(255,255,255,0.75);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.program-card--featured .program-sponsor {
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+.program-card--featured .program-sponsor strong {
+  color: var(--amber-light);
+}
+
+.program-card--featured .program-sponsor span {
+  color: rgba(255,255,255,0.5);
 }
 
 /* ---- TEAM ---- */
