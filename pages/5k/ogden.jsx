@@ -338,10 +338,10 @@ function RegistrationCards() {
           {/* Card 2: Donate */}
           <div className="fivek-reg-card">
             <p className="fivek-reg-card-tag">Supporter</p>
-            <h3>Give Any Amount</h3>
+            <h3>Sponsor a Player</h3>
             <p className="fivek-reg-card-body">
-              Can&rsquo;t make it to {event.city}? You can still put real equipment in kids&rsquo; hands.
-              Every dollar goes directly to youth soccer gear in Dominica.
+              $80 fully equips one youth athlete &mdash; jersey, shorts, socks, shin guards, and cleats.
+              Give what you can. Every dollar goes directly to kids in the Kalinago Territory.
             </p>
             <div className="fivek-amounts">
               {event.supportOptions.map((opt) => (
@@ -362,8 +362,8 @@ function RegistrationCards() {
             </div>
             <ul className="fivek-reg-card-list">
               <li>Funds go directly to equipment &mdash; no overhead</li>
-              <li>$80 fully equips one youth player</li>
-              <li>Every amount makes a difference</li>
+              <li>Can&rsquo;t make the run? Donate from anywhere</li>
+              <li>All supporters listed in post-trip report</li>
             </ul>
             <a href={event.donationLink} className="btn btn-primary" style={{ textAlign: "center" }}>
               Donate Now
