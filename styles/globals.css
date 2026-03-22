@@ -1287,6 +1287,121 @@ h3 {
   -moz-appearance: textfield;
 }
 
+/* Sponsors */
+
+.fivek-sponsors {
+  padding: 48px 0;
+  background: var(--warm-white);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.fivek-sponsors-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.fivek-sponsors-label {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.fivek-sponsors-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.fivek-sponsor-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 28px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.1);
+  background: var(--white);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.fivek-sponsor-slot:hover {
+  border-color: var(--amber);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.fivek-sponsor-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.65;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.fivek-sponsor-slot:hover .fivek-sponsor-logo {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.fivek-sponsor-name {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-mid);
+  letter-spacing: 0.02em;
+}
+
+.fivek-sponsor-slot--open {
+  border-style: dashed;
+  border-color: rgba(0,0,0,0.15);
+  background: transparent;
+}
+
+.fivek-sponsor-open-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* Pitch layout (no sponsors yet) */
+
+.fivek-sponsors-pitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.fivek-sponsors-pitch-body {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-top: 10px;
+  max-width: 500px;
+}
+
+@media (max-width: 700px) {
+  .fivek-sponsors-pitch {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
 /* Community */
 
 .fivek-community {

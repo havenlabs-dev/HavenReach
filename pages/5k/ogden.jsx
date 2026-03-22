@@ -32,6 +32,9 @@ const event = {
   donationLink: "#donate",
   supportOptions: ["$10", "$20", "$25"],
   contactEmail: "reach@havenlabs.org",
+  // Add confirmed sponsors here: { name: "...", url: "https://...", logo: "/images/sponsors/..." }
+  // logo is optional — name will display as text if no logo provided
+  sponsors: [],
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -341,7 +344,7 @@ function RegistrationCards() {
             <h3>Sponsor a Player</h3>
             <p className="fivek-reg-card-body">
               $80 fully equips one youth athlete &mdash; jersey, shorts, socks, shin guards, and cleats.
-              Give what you can. Every dollar goes directly to kids in the Kalinago Territory.
+              We&rsquo;re grateful for every contribution. Every dollar goes directly to kids in the Kalinago Territory.
             </p>
             <div className="fivek-amounts">
               {event.supportOptions.map((opt) => (
@@ -369,6 +372,64 @@ function RegistrationCards() {
               Donate Now
             </a>
           </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SPONSORS
+// ─────────────────────────────────────────────────────────────────────────────
+
+function Sponsors() {
+  const hasSponsors = event.sponsors.length > 0;
+
+  return (
+    <section className="fivek-sponsors">
+      <div className="container">
+        <div className="fivek-sponsors-inner">
+
+          {hasSponsors ? (
+            <>
+              <p className="fivek-sponsors-label">Event Sponsors</p>
+              <div className="fivek-sponsors-row">
+                {event.sponsors.map((s) => (
+                  <a
+                    key={s.name}
+                    href={s.url || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fivek-sponsor-slot"
+                  >
+                    {s.logo
+                      ? <img src={s.logo} alt={s.name} className="fivek-sponsor-logo" />
+                      : <span className="fivek-sponsor-name">{s.name}</span>
+                    }
+                  </a>
+                ))}
+                <a href={`mailto:${event.contactEmail}`} className="fivek-sponsor-slot fivek-sponsor-slot--open">
+                  <span className="fivek-sponsor-open-label">Become a Sponsor</span>
+                </a>
+              </div>
+            </>
+          ) : (
+            <div className="fivek-sponsors-pitch">
+              <div className="fivek-sponsors-pitch-text">
+                <p className="fivek-sponsors-label">Event Sponsors</p>
+                <p className="fivek-sponsors-pitch-body">
+                  Interested in sponsoring the {event.city} 5K? We&rsquo;re looking for local
+                  businesses and organizations to help make this event happen.
+                  Sponsors are recognized at the event, on this page, and in our
+                  post-trip report.
+                </p>
+              </div>
+              <a href={`mailto:${event.contactEmail}`} className="btn btn-outline">
+                Get in Touch
+              </a>
+            </div>
+          )}
 
         </div>
       </div>
@@ -563,6 +624,7 @@ export default function FiveKOgden() {
       <Mission />
       <EventDetails />
       <RegistrationCards />
+      <Sponsors />
       <Community />
       <FAQ />
       <FinalCTA />
