@@ -613,12 +613,18 @@ export default function FiveKOgden() {
   return (
     <>
       <Head>
-        <title>{event.title} &middot; HavenReach</title>
+        <title>{`${event.title} · HavenReach`}</title>
         <meta
           name="description"
           content={`${event.tagline} Join the HavenReach 5K in ${event.city} on ${event.date}. Register or donate to support youth soccer equipment for children in Dominica.`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content={`${event.title} · HavenReach`} />
+        <meta
+          property="og:description"
+          content={`${event.tagline} Join us ${event.date} at ${event.location}. Register for ${event.price} or sponsor a youth athlete.`}
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <NavBar />
       <Hero />
