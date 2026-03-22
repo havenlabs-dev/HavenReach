@@ -1543,12 +1543,27 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .fivek-hero {
-    padding: 120px 0 64px;
+  /* Nav */
+  .fivek-nav-back {
+    display: none;
   }
 
-  .fivek-equipment-grid {
-    grid-template-columns: 1fr;
+  /* Hero */
+  .fivek-hero {
+    padding: 96px 0 52px;
+  }
+
+  .fivek-hero-title {
+    font-size: clamp(2.2rem, 11vw, 5rem);
+  }
+
+  .fivek-hero-tagline {
+    font-size: 1rem;
+  }
+
+  .fivek-hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 28px;
   }
 
   .fivek-cta-row {
@@ -1558,6 +1573,90 @@ h3 {
   .fivek-cta-row .btn {
     width: 100%;
     text-align: center;
+  }
+
+  /* Hero aside: 2-column grid so it's compact, not a tall scroll */
+  .fivek-hero-aside-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    gap: 0;
+  }
+
+  .fivek-hero-aside-stat,
+  .fivek-hero-aside-stat:first-child,
+  .fivek-hero-aside-stat:last-child {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-right: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .fivek-hero-aside-stat:nth-child(even) {
+    border-right: none;
+  }
+
+  .fivek-hero-aside-stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .fivek-hero-aside-label {
+    font-size: 0.6rem;
+  }
+
+  .fivek-hero-aside-value {
+    font-size: 0.85rem;
+  }
+
+  /* Mission: keep equipment grid 2-col — compact but still readable */
+  .fivek-equipment-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Event details: tighter card padding */
+  .fivek-detail-card {
+    padding: 16px 18px;
+  }
+
+  /* Registration: less card padding */
+  .fivek-reg-card {
+    padding: 28px 22px;
+  }
+
+  .fivek-reg-price {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+  }
+
+  /* Sponsors: tighter */
+  .fivek-sponsors {
+    padding: 36px 0;
+  }
+
+  /* Community & Final CTA: stack buttons full width */
+  .fivek-community .hero-actions,
+  .fivek-final-cta .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fivek-community .hero-actions .btn,
+  .fivek-final-cta .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* FAQ: tighter */
+  .fivek-faq-btn {
+    padding: 16px 18px;
+  }
+
+  .fivek-faq-q {
+    font-size: 0.82rem;
+  }
+
+  /* Final CTA heading */
+  .fivek-final-cta h2 {
+    font-size: clamp(1.6rem, 8vw, 3rem);
   }
 }
 

@@ -120,6 +120,7 @@ function NavBar() {
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <a
             href="/"
+            className="fivek-nav-back"
             style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.8rem", fontFamily: "var(--font-heading)", letterSpacing: "0.06em", textDecoration: "none" }}
           >
             ← havenreach.net
