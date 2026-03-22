@@ -1127,6 +1127,13 @@ h3 {
   margin-top: 56px;
 }
 
+.fivek-register-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .fivek-reg-card {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -1239,6 +1246,45 @@ h3 {
   border: 1px solid rgba(0,0,0,0.08);
   padding: 5px 12px;
   border-radius: 100px;
+}
+
+.fivek-amount-pill--custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 5px 10px;
+}
+
+.fivek-amount-currency {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.fivek-amount-input {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  width: 64px;
+  padding: 0;
+}
+
+.fivek-amount-input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Remove number input spinners */
+.fivek-amount-input::-webkit-outer-spin-button,
+.fivek-amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.fivek-amount-input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* Community */
@@ -1375,7 +1421,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .fivek-register-grid {
+  .fivek-register-grid,
+  .fivek-register-grid--two {
     grid-template-columns: 1fr;
   }
 }

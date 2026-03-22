@@ -302,6 +302,8 @@ function EventDetails() {
 // ─────────────────────────────────────────────────────────────────────────────
 
 function RegistrationCards() {
+  const [customAmount, setCustomAmount] = useState("");
+
   return (
     <section id="register" className="fivek-register">
       <div className="container">
@@ -310,12 +312,12 @@ function RegistrationCards() {
           <span className="section-label">Get Involved</span>
           <h2>Choose how you want to help</h2>
           <p>
-            Whether you run, donate, or simply share &mdash; every contribution moves equipment
+            Whether you run or donate &mdash; every contribution moves equipment
             closer to kids in the Kalinago Territory.
           </p>
         </div>
 
-        <div className="fivek-register-grid">
+        <div className="fivek-register-grid fivek-register-grid--two">
 
           {/* Card 1: Run */}
           <div className="fivek-reg-card fivek-reg-card--featured">
@@ -336,35 +338,35 @@ function RegistrationCards() {
           {/* Card 2: Donate */}
           <div className="fivek-reg-card">
             <p className="fivek-reg-card-tag">Supporter</p>
-            <h3>Support HavenReach</h3>
-            <p className="fivek-reg-card-body">Give any amount. Every dollar goes to equipment for youth athletes in Dominica.</p>
+            <h3>Give Any Amount</h3>
+            <p className="fivek-reg-card-body">
+              Can&rsquo;t make it to {event.city}? You can still put real equipment in kids&rsquo; hands.
+              Every dollar goes directly to youth soccer gear in Dominica.
+            </p>
             <div className="fivek-amounts">
               {event.supportOptions.map((opt) => (
                 <span key={opt} className="fivek-amount-pill">{opt}</span>
               ))}
+              <span className="fivek-amount-pill fivek-amount-pill--custom">
+                <span className="fivek-amount-currency">$</span>
+                <input
+                  type="number"
+                  min="1"
+                  placeholder="Custom"
+                  value={customAmount}
+                  onChange={(e) => setCustomAmount(e.target.value)}
+                  className="fivek-amount-input"
+                  aria-label="Custom donation amount"
+                />
+              </span>
             </div>
             <ul className="fivek-reg-card-list">
-              <li>Can&rsquo;t run? Still make a real impact</li>
-              <li>Funds go directly to equipment</li>
-              <li>Every amount counts</li>
+              <li>Funds go directly to equipment &mdash; no overhead</li>
+              <li>$80 fully equips one youth player</li>
+              <li>Every amount makes a difference</li>
             </ul>
             <a href={event.donationLink} className="btn btn-primary" style={{ textAlign: "center" }}>
               Donate Now
-            </a>
-          </div>
-
-          {/* Card 3: Can't Attend */}
-          <div className="fivek-reg-card">
-            <p className="fivek-reg-card-tag">From Anywhere</p>
-            <h3>Can&rsquo;t Make It?</h3>
-            <p className="fivek-reg-card-body">You can still be part of this. Donate online or share this page with your network.</p>
-            <ul className="fivek-reg-card-list">
-              <li>Donate online from anywhere</li>
-              <li>Share this page with your network</li>
-              <li>Support the mission from wherever you are</li>
-            </ul>
-            <a href={event.donationLink} className="btn btn-outline" style={{ textAlign: "center" }}>
-              Give Online
             </a>
           </div>
 
