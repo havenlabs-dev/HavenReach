@@ -138,47 +138,55 @@ function Hero() {
   return (
     <section className="fivek-hero">
       <div className="container">
+        <div className="fivek-hero-layout">
 
-        <div className="fivek-badge">
-          <span>HavenReach</span>
-          <span style={{ opacity: 0.4 }}>&middot;</span>
-          <span>{event.city}, {event.state}</span>
-        </div>
-
-        <h1 className="fivek-hero-title">{event.title}</h1>
-
-        <p className="fivek-hero-tagline">{event.tagline}</p>
-
-        <p className="fivek-hero-desc">
-          Join us for a community 5K run in {event.city} to raise funds for youth soccer
-          equipment in the Kalinago Territory of Dominica. Every registration fee goes directly
-          toward jerseys, cleats, shin guards, and the gear that keeps kids in the game.
-        </p>
-
-        <div className="fivek-facts">
-          {[
-            { icon: <IconCalendar />, text: event.date },
-            { icon: <IconClock />, text: `${event.time} start · Check-in at ${event.checkIn}` },
-            { icon: <IconPin />, text: event.location },
-            { icon: <IconTicket />, text: `${event.price} per runner` },
-          ].map(({ icon, text }) => (
-            <div key={text} className="fivek-fact">
-              <span className="fivek-fact-dot"></span>
-              {icon}
-              <span>{text}</span>
+          <div className="fivek-hero-main">
+            <div className="fivek-badge">
+              <span>HavenReach</span>
+              <span style={{ opacity: 0.4 }}>&middot;</span>
+              <span>{event.city}, {event.state}</span>
             </div>
-          ))}
+
+            <h1 className="fivek-hero-title">{event.title}</h1>
+
+            <p className="fivek-hero-tagline">{event.tagline}</p>
+
+            <p className="fivek-hero-desc">
+              A community 5K in {event.city} raising funds for youth soccer equipment
+              in the Kalinago Territory of Dominica. Run. Walk. Show up.
+            </p>
+
+            <div className="fivek-cta-row">
+              <a href={event.registrationLink} className="btn btn-primary">
+                Register Now &mdash; {event.price}
+              </a>
+              <a href={event.donationLink} className="btn btn-secondary">Donate Instead</a>
+            </div>
+
+            <p className="fivek-shirt-note">
+              First <strong>{event.shirtLimit} runners</strong> receive an event shirt.
+            </p>
+          </div>
+
+          <div className="fivek-hero-aside">
+            <div className="fivek-hero-aside-card">
+              {[
+                { label: "Date", value: event.date },
+                { label: "Race Start", value: event.time },
+                { label: "Check-in Opens", value: event.checkIn },
+                { label: "Location", value: event.location },
+                { label: "Entry Fee", value: `${event.price} per runner` },
+                { label: "Route", value: event.routeType },
+              ].map(({ label, value }) => (
+                <div key={label} className="fivek-hero-aside-stat">
+                  <span className="fivek-hero-aside-label">{label}</span>
+                  <span className="fivek-hero-aside-value">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-
-        <p className="fivek-shirt-note">
-          First <strong>{event.shirtLimit} runners</strong> to register receive an event shirt.
-        </p>
-
-        <div className="fivek-cta-row">
-          <a href={event.registrationLink} className="btn btn-primary">Register Now</a>
-          <a href={event.donationLink} className="btn btn-secondary">Donate Instead</a>
-        </div>
-
       </div>
     </section>
   );
@@ -355,7 +363,7 @@ function RegistrationCards() {
               <li>Share this page with your network</li>
               <li>Support the mission from wherever you are</li>
             </ul>
-            <a href={event.donationLink} className="btn btn-secondary" style={{ textAlign: "center" }}>
+            <a href={event.donationLink} className="btn btn-outline" style={{ textAlign: "center" }}>
               Give Online
             </a>
           </div>

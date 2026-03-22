@@ -860,8 +860,15 @@ h3 {
 /* ---- 5K EVENT PAGE ---- */
 
 .fivek-hero {
-  background: var(--cream);
-  padding: 120px 0 88px;
+  background: var(--green-deep);
+  padding: 160px 0 100px;
+}
+
+.fivek-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: center;
 }
 
 .fivek-badge {
@@ -874,8 +881,8 @@ h3 {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--amber);
-  background: rgba(196, 124, 53, 0.1);
-  border: 1px solid rgba(196, 124, 53, 0.2);
+  background: rgba(196, 124, 53, 0.15);
+  border: 1px solid rgba(196, 124, 53, 0.3);
   padding: 6px 16px;
   border-radius: 100px;
   margin-bottom: 28px;
@@ -883,66 +890,104 @@ h3 {
 
 .fivek-hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.0;
-  color: var(--green-deep);
-  margin-bottom: 16px;
+  color: var(--white);
+  margin-bottom: 20px;
 }
 
 .fivek-hero-tagline {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  color: var(--text-mid);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.65);
   font-weight: 300;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   max-width: 480px;
 }
 
 .fivek-hero-desc {
-  font-size: 1.05rem;
-  color: var(--text-mid);
-  max-width: 540px;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 520px;
   line-height: 1.75;
-  margin-bottom: 36px;
-}
-
-.fivek-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 0;
-  margin-bottom: 10px;
-}
-
-.fivek-fact {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  padding-right: 32px;
-}
-
-.fivek-fact-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--amber);
-  flex-shrink: 0;
+  margin-bottom: 40px;
 }
 
 .fivek-shirt-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 40px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 16px;
+}
+
+.fivek-shirt-note strong {
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
 }
 
 .fivek-cta-row {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+/* Hero aside info card */
+
+.fivek-hero-aside-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.fivek-hero-aside-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.fivek-hero-aside-stat:first-child {
+  padding-top: 0;
+}
+
+.fivek-hero-aside-stat:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fivek-hero-aside-label {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.fivek-hero-aside-value {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.3;
+}
+
+/* Outline button — for light-background sections */
+
+.btn-outline {
+  background: transparent;
+  color: var(--green-deep);
+  border: 2px solid rgba(26, 52, 40, 0.35);
+  padding: 11px 28px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--green-deep);
+  color: var(--white);
+  border-color: var(--green-deep);
 }
 
 /* Mission */
@@ -1200,7 +1245,7 @@ h3 {
 
 .fivek-community {
   padding: var(--section-pad) 0;
-  background: var(--warm-white);
+  background: var(--green-deep);
 }
 
 .fivek-community-inner {
@@ -1210,11 +1255,12 @@ h3 {
 }
 
 .fivek-community-inner h2 {
+  color: var(--white);
   margin-bottom: 20px;
 }
 
 .fivek-community-inner p {
-  color: var(--text-mid);
+  color: rgba(255,255,255,0.6);
   font-size: 1.05rem;
   line-height: 1.75;
   margin-bottom: 14px;
@@ -1315,6 +1361,11 @@ h3 {
 /* 5K Responsive */
 
 @media (max-width: 900px) {
+  .fivek-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .fivek-mission-inner {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1331,7 +1382,7 @@ h3 {
 
 @media (max-width: 600px) {
   .fivek-hero {
-    padding: 100px 0 64px;
+    padding: 120px 0 64px;
   }
 
   .fivek-equipment-grid {
