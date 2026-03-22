@@ -857,6 +857,497 @@ h3 {
   color: rgba(255,255,255,0.25);
 }
 
+/* ---- 5K EVENT PAGE ---- */
+
+.fivek-hero {
+  background: var(--cream);
+  padding: 120px 0 88px;
+}
+
+.fivek-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: rgba(196, 124, 53, 0.1);
+  border: 1px solid rgba(196, 124, 53, 0.2);
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+}
+
+.fivek-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  color: var(--green-deep);
+  margin-bottom: 16px;
+}
+
+.fivek-hero-tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: var(--text-mid);
+  font-weight: 300;
+  margin-bottom: 24px;
+  max-width: 480px;
+}
+
+.fivek-hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 540px;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.fivek-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  margin-bottom: 10px;
+}
+
+.fivek-fact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding-right: 32px;
+}
+
+.fivek-fact-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.fivek-shirt-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.fivek-cta-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Mission */
+
+.fivek-mission {
+  padding: var(--section-pad) 0;
+  background: var(--warm-white);
+}
+
+.fivek-mission-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.fivek-mission-text h2 {
+  margin-bottom: 24px;
+}
+
+.fivek-mission-text p {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.fivek-equipment-heading {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.fivek-equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fivek-equipment-item {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.fivek-equipment-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 3px;
+}
+
+.fivek-equipment-item p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Event details (dark section) */
+
+.fivek-details {
+  background: var(--green-deep);
+  padding: var(--section-pad) 0;
+}
+
+.fivek-details-header h2 {
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.fivek-details-sub {
+  color: rgba(255,255,255,0.55);
+  font-size: 1rem;
+  margin-top: 12px;
+}
+
+.fivek-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 48px;
+}
+
+.fivek-detail-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.fivek-detail-icon {
+  color: var(--amber);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.9rem;
+}
+
+.fivek-detail-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 5px;
+}
+
+.fivek-detail-value {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+}
+
+/* Registration cards */
+
+.fivek-register {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+}
+
+.fivek-register-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.fivek-reg-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.fivek-reg-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.fivek-reg-card--featured {
+  background: var(--green-deep);
+  border-color: transparent;
+}
+
+.fivek-reg-card-tag {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+
+.fivek-reg-card--featured .fivek-reg-card-tag {
+  color: var(--amber-light);
+}
+
+.fivek-reg-card h3 {
+  font-size: 1.2rem;
+  color: var(--green-deep);
+  margin-bottom: 4px;
+}
+
+.fivek-reg-card--featured h3 {
+  color: var(--white);
+}
+
+.fivek-reg-price {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--amber);
+  margin-bottom: 20px;
+}
+
+.fivek-reg-card-list {
+  list-style: none;
+  margin-bottom: 28px;
+  flex: 1;
+}
+
+.fivek-reg-card-list li {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  padding: 7px 0 7px 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.fivek-reg-card--featured .fivek-reg-card-list li {
+  color: rgba(255,255,255,0.75);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.fivek-reg-card-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-size: 0.8rem;
+}
+
+.fivek-reg-card--featured .fivek-reg-card-list li::before {
+  color: var(--amber-light);
+}
+
+.fivek-reg-card-body {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.fivek-reg-card--featured .fivek-reg-card-body {
+  color: rgba(255,255,255,0.55);
+}
+
+.fivek-amounts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.fivek-amount-pill {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+/* Community */
+
+.fivek-community {
+  padding: var(--section-pad) 0;
+  background: var(--warm-white);
+}
+
+.fivek-community-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fivek-community-inner h2 {
+  margin-bottom: 20px;
+}
+
+.fivek-community-inner p {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* FAQ */
+
+.fivek-faq {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+}
+
+.fivek-faq-list {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fivek-faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.fivek-faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.fivek-faq-btn:hover {
+  background: var(--cream);
+}
+
+.fivek-faq-q {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  line-height: 1.4;
+}
+
+.fivek-faq-arrow {
+  color: var(--amber);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  font-size: 0.7rem;
+}
+
+.fivek-faq-arrow--open {
+  transform: rotate(180deg);
+}
+
+.fivek-faq-answer {
+  padding: 0 24px 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.fivek-faq-answer p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  padding-top: 16px;
+  margin: 0;
+}
+
+/* Final CTA */
+
+.fivek-final-cta {
+  padding: var(--section-pad) 0;
+  background: var(--green-deep);
+  text-align: center;
+}
+
+.fivek-final-cta h2 {
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.fivek-final-cta > .container > p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+}
+
+/* 5K Responsive */
+
+@media (max-width: 900px) {
+  .fivek-mission-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .fivek-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fivek-register-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .fivek-hero {
+    padding: 100px 0 64px;
+  }
+
+  .fivek-equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fivek-cta-row {
+    flex-direction: column;
+  }
+
+  .fivek-cta-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* ---- RESPONSIVE ---- */
 
 @media (max-width: 900px) {

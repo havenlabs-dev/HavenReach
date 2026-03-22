@@ -459,9 +459,13 @@ function FAQ() {
                 aria-expanded={openIndex === i}
               >
                 <span className="fivek-faq-q">{item.q}</span>
-                <span className={`fivek-faq-arrow${openIndex === i ? " fivek-faq-arrow--open" : ""}`}>
-                  &#9660;
-                </span>
+                <svg
+                  className={`fivek-faq-arrow${openIndex === i ? " fivek-faq-arrow--open" : ""}`}
+                  style={{ width: 16, height: 16 }}
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </button>
               {openIndex === i && (
                 <div className="fivek-faq-answer">
